@@ -17,10 +17,10 @@ public class Conversions
         System.out.println("4. Meters to Feet");
         System.out.println("5. Ounces to Milliliters");
         System.out.println("6. Milliliters to Ounces");
-        System.out.println(x:"7. Hours to Minutes");
-        System.out.println(x:"8. Minites to Hours");
-        System.out.println(x:"9. Days to Years");
-        System.out.println(x:"10. Years to Days");
+        System.out.println("7. Hours to Minutes");
+        System.out.println("8. Minites to Hours");
+        System.out.println("9. Hours to Years");
+        System.out.println("10. Years to Hours");
         //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
         //You can add even more if you would like.
 
@@ -37,8 +37,8 @@ public class Conversions
         }
         if (selection == 2)
         {
-            System.out.println(x:"Enter Fahrenheit: ");
-            double fahrenheit = keyboard.nextdouble();
+            System.out.println("Enter Fahrenheit: ");
+            double fahrenheit = keyboard.nextDouble();
             keyboard.nextLine();
             double celsius = fahrenheit / (9.0 / 5.0) + 32;
             System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celsius");
@@ -46,43 +46,67 @@ public class Conversions
         }
         if (selection == 3)
         {
-            System.out.println(x:"Enter Feet: ");
-            double feet = keyboard.nextdouble();
+            System.out.println("Enter Feet: ");
+            double feet = keyboard.nextDouble();
             keyboard.nextLine();
             double meters = feet * 3.28;
             System.out.println(feet + " feet is " + meters + " meters ");
         }   
         if (selection == 4)
         {
-            System.out.println(x:"Enter Meters: ");
-            double meters = keyboard.nextdouble();
+            System.out.println("Enter Meters: ");
+            double meters = keyboard.nextDouble();
             keyboard.nextLine();
             double feet = meters /3.28;
             System.out.println(meters + " meters is" + feet + " feet ");
         }
         if (selection == 5)
         {
-            System.out.println(x:"Enter Ounces: ");
-            double ounces = keyboard.nextdouble();
+            System.out.println("Enter Ounces: ");
+            double ounces = keyboard.nextDouble();
             keyboard.nextLine();
             double milliliters = ounces * 29.57;
             System.out.println(ounces + " ounces is" + milliliters + " milliliters ");
         }
         if (selection == 6)
         {
-            System.out.println(x:"Enter Milliliters: ");
-            double milliliters = keyboard.nextdouble();
+            System.out.println("Enter Milliliters: ");
+            double milliliters = keyboard.nextDouble();
             keyboard.nextLine();
             double ounces = milliliters / 29.57;
             System.out.println(milliliters + " milliliters is" + ounces + " ounces ");
         }
         if (selection == 7) 
         {
-            System.out.println(x:"Enter Hours: ");
-            double hours = keyboard.nextdouble();
+            System.out.println("Enter Hours: ");
+            double hours = keyboard.nextDouble();
             keyboard.nextLine();
             double minutes = hours * 60;
-            System.out.println(ounces + " ounces is" + milliliters + " milliliters ");
-            //add more if statements here.
+            System.out.println(hours + " hours is" + minutes + " miniutes ");
+        }
+        if (selection == 8)
+        {
+            System.out.println("Enter Miniutes: ");
+            double miniutes = keyboard.nextDouble();
+            keyboard.nextLine();
+            double hours = miniutes / 60;
+            System.out.println(miniutes + " miniutes is" + hours + " hours ");
+        }
+        if (selection == 9)
+        {
+            System.out.println("Enter Hours: ");
+            double hours = keyboard.nextDouble();
+            keyboard.nextLine();
+            double days = hours / 24;
+            System.out.println(hours + " hours is" + days + " days ");
+        }
+        if (selection == 10)
+        {
+            System.out.println("Enter Days: ");
+            double days = keyboard.nextDouble();
+            keyboard.nextLine();
+            double hours = days / 24;
+            System.out.println(days + " days is" + hours + " hours ");
+        }//add more if statements here.
     }
 }
