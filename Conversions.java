@@ -19,8 +19,8 @@ public class Conversions
         System.out.println("6. Milliliters to Ounces");
         System.out.println("7. Hours to Minutes");
         System.out.println("8. Minites to Hours");
-        System.out.println("9. Hours to Years");
-        System.out.println("10. Years to Hours");
+        System.out.println("9. Hours to Days");
+        System.out.println("10. Days to Hours");
         //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
         //You can add even more if you would like.
 
@@ -40,7 +40,7 @@ public class Conversions
             System.out.println("Enter Fahrenheit: ");
             double fahrenheit = keyboard.nextDouble();
             keyboard.nextLine();
-            double celsius = fahrenheit / (9.0 / 5.0) + 32;
+            double celsius = (fahrenheit - 32) * (5.0 / 9.0);
             System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celsius");
             //add the code to ask the user to enter Fahrenheit and then convert to Celsius
         }
@@ -58,7 +58,7 @@ public class Conversions
             double meters = keyboard.nextDouble();
             keyboard.nextLine();
             double feet = meters /3.28;
-            System.out.println(meters + " meters is" + feet + " feet ");
+            System.out.println(meters + " meters is " + feet + " feet ");
         }
         if (selection == 5)
         {
@@ -66,7 +66,7 @@ public class Conversions
             double ounces = keyboard.nextDouble();
             keyboard.nextLine();
             double milliliters = ounces * 29.57;
-            System.out.println(ounces + " ounces is" + milliliters + " milliliters ");
+            System.out.println(ounces + " ounces is " + milliliters + " milliliters ");
         }
         if (selection == 6)
         {
@@ -74,7 +74,7 @@ public class Conversions
             double milliliters = keyboard.nextDouble();
             keyboard.nextLine();
             double ounces = milliliters / 29.57;
-            System.out.println(milliliters + " milliliters is" + ounces + " ounces ");
+            System.out.println(milliliters + " milliliters is " + ounces + " ounces ");
         }
         if (selection == 7) 
         {
@@ -82,7 +82,7 @@ public class Conversions
             double hours = keyboard.nextDouble();
             keyboard.nextLine();
             double minutes = hours * 60;
-            System.out.println(hours + " hours is" + minutes + " miniutes ");
+            System.out.println(hours + " hours is " + minutes + " miniutes ");
         }
         if (selection == 8)
         {
@@ -90,7 +90,7 @@ public class Conversions
             double miniutes = keyboard.nextDouble();
             keyboard.nextLine();
             double hours = miniutes / 60;
-            System.out.println(miniutes + " miniutes is" + hours + " hours ");
+            System.out.println(miniutes + " miniutes is " + hours + " hours ");
         }
         if (selection == 9)
         {
@@ -98,15 +98,15 @@ public class Conversions
             double hours = keyboard.nextDouble();
             keyboard.nextLine();
             double days = hours / 24;
-            System.out.println(hours + " hours is" + days + " days ");
+            System.out.println(hours + " hours is " + days + " days ");
         }
         if (selection == 10)
         {
             System.out.println("Enter Days: ");
             double days = keyboard.nextDouble();
             keyboard.nextLine();
-            double hours = days / 24;
-            System.out.println(days + " days is" + hours + " hours ");
+            double hours = days * 24;
+            System.out.println(days + " days is " + hours + " hours ");
         }//add more if statements here.
     }
 }
